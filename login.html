@@ -7,71 +7,144 @@
 
   <title>InviteMe | Login</title>
 
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&display=swap"
-    rel="stylesheet">
-
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: "Hanken Grotesk", sans-serif;
+      font-family: Arial, sans-serif;
+      background-color: #fdf8ff;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 450px;
+      background-color: white;
+      border-radius: 32px;
+      padding: 40px;
+      border: 1px solid #e6deff;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    }
+
+    .heading {
+      margin-bottom: 40px;
+    }
+
+    .heading h1 {
+      font-size: 39px;
+      color: #4100c3;
+      font-weight: bold;
+      margin-bottom: 12px;
+    }
+
+    .heading p {
+      color: #6b7280;
+      font-size: 16px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .input-group label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: 500;
+      color: #374151;
+    }
+
+    .input-group input {
+      width: 100%;
+      padding: 16px;
+      border-radius: 14px;
+      border: 1px solid #d1d5db;
+      font-size: 16px;
+      outline: none;
+      transition: 0.3s;
+    }
+
+    .input-group input:focus {
+      border-color: #591cf4;
+      box-shadow: 0 0 0 4px rgba(89, 28, 244, 0.12);
+    }
+
+    button {
+      width: 100%;
+      background-color: #591cf4;
+      color: white;
+      padding: 16px;
+      border: none;
+      border-radius: 14px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #4100c3;
     }
   </style>
 </head>
 
-<body class="bg-[#fdf8ff] min-h-screen flex items-center justify-center px-6">
+<body>
 
-  <div class="w-full max-w-md bg-white rounded-[32px] p-10 shadow-xl border border-[#e6deff]">
+  <div class="container">
 
-    <div class="mb-10">
+    <div class="heading">
 
-      <h1 class="text-4xl font-bold text-[#4100c3]">
-        Hello Stephen 
+      <h1>
+        Hello Stephen
       </h1>
 
-      <p class="text-gray-500 mt-3">
-        Welcome back 
+      <p>
+        Welcome back
       </p>
 
     </div>
 
-    <form target="_blank" action="index.html" class="space-y-6">
+    <form target="_blank" action="index.html">
 
       <!-- Name -->
-      <div>
+      <div class="input-group">
 
-        <label class="block mb-2 font-medium text-gray-700">
+        <label>
           Name
         </label>
 
         <input
           type="text"
           required
-          placeholder="Stephen"
-          class="w-full rounded-xl border border-gray-200 px-4 py-4 focus:outline-none focus:border-[#591cf4]">
+          placeholder="Stephen">
 
       </div>
 
       <!-- Email -->
-      <div>
+      <div class="input-group">
 
-        <label class="block mb-2 font-medium text-gray-700">
+        <label>
           Email Address
         </label>
 
         <input
           type="email"
           required
-          placeholder="stephen@email.com"
-          class="w-full rounded-xl border border-gray-200 px-4 py-4 focus:outline-none focus:border-[#591cf4]">
+          placeholder="stephen@email.com">
 
       </div>
 
       <!-- Button -->
-      <button
-        type="submit"
-        class="w-full bg-[#591cf4] hover:bg-[#4100c3] text-white py-4 rounded-xl font-semibold transition">
+      <button type="submit">
 
         Login
 
