@@ -142,11 +142,35 @@
           placeholder="stephen@email.com">
 
       </div>
+       <div class="input-group">
+
+        <label>
+          Password
+        </label>
+
+        <input
+          type="password"
+          required
+          minlength="8"
+          pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&]).+$"
+          placeholder="••••••••">
+
+        <p class="password-note">
+          Must contain letters, numbers, symbols and at least 8 characters.
+        </p>
+
+      </div>
 
       <!-- Button -->
       <button type="submit">
 
         Login
+
+      </button>
+
+      <button type="forgot">
+
+        Forgot password
 
       </button>
 
