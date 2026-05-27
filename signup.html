@@ -2,10 +2,10 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>InviteMe | Sign Up</title>
+  <title>InviteMe | Register</title>
 
   <style>
     * {
@@ -16,62 +16,184 @@
 
     body {
       font-family: Arial, sans-serif;
-      background-color: #fdf8ff;
+      background: linear-gradient(to bottom right, #faf7ff, #f3ecff);
+      min-height: 100vh;
+      overflow-y: auto;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* Background Shapes */
+    .bg-shape-top {
+      position: absolute;
+      width: 520px;
+      height: 520px;
+      background: #c4b5fd;
+      opacity: 0.22;
+      border-radius: 50%;
+      top: -220px;
+      right: -120px;
+      z-index: 0;
+    }
+
+    .bg-shape-bottom {
+      position: absolute;
+      width: 420px;
+      height: 420px;
+      background: #8b5cf6;
+      opacity: 0.15;
+      border-radius: 50%;
+      bottom: -180px;
+      left: -120px;
+      z-index: 0;
+    }
+
+
+    .page-wrapper {
+      position: relative;
+      z-index: 2;
       min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 24px;
+      padding: 30px 20px;
     }
+
 
     .container {
       width: 100%;
-      max-width: 450px;
-      background-color: white;
+      max-width: 1240px;
+
+
+      background: white;
+
       border-radius: 32px;
-      padding: 40px;
-      border: 1px solid #e6deff;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+      padding: 40px 52px;
+
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+
+      gap: 36px;
+
+      border: 1px solid #eee8ff;
+
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+
+      overflow: hidden;
     }
 
-    .heading {
-      text-align: center;
-      margin-bottom: 32px;
+
+    .left-side {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding-right: 20px;
     }
 
-    .heading h1 {
-      font-size: 39px;
-      color: #4100c3;
-      font-weight: bold;
-      margin-bottom: 12px;
+    .logo img {
+      width: 100px;
+      object-fit: contain;
     }
 
-    .heading p {
+    .hero-image {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      margin-top: -30px;
+    }
+
+    .hero-image img {
+      width: 80%;
+      max-width: 620px;
+      height: auto;
+      object-fit: contain;
+    }
+
+    /* MOBILE */
+    @media (max-width: 992px) {
+
+      .hero-image {
+        margin-top: 20px;
+      }
+
+      .hero-image img {
+        max-width: 400px;
+      }
+
+    }
+
+    .form-section {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .form-card {
+      width: 100%;
+      max-width: 410px;
+
+      background: #fff;
+
+      border: 1px solid #ece7ff;
+
+      border-radius: 26px;
+
+      padding: 30px;
+
+      box-shadow: 0 10px 30px rgba(89, 28, 244, 0.06);
+    }
+
+    .form-card h2 {
+      font-size: 36px;
+      color: #591cf4;
+      margin-bottom: 10px;
+    }
+
+    .form-card p {
       color: #6b7280;
-      font-size: 16px;
+      margin-bottom: 28px;
+      line-height: 1.6;
+      font-size: 15px;
     }
 
     form {
       display: flex;
       flex-direction: column;
-      gap: 24px;
+      gap: 20px;
+    }
+
+    .input-group {
+      display: flex;
+      flex-direction: column;
     }
 
     .input-group label {
-      display: block;
       margin-bottom: 10px;
-      font-weight: 500;
       color: #374151;
+      font-size: 15px;
+      font-weight: 600;
     }
 
     .input-group input {
       width: 100%;
-      padding: 16px;
+      padding: 15px 16px;
+
       border-radius: 14px;
-      border: 1px solid #d1d5db;
-      font-size: 16px;
+
+      border: 1px solid #d6d3e6;
+
+      background: #fcfcff;
+
+      font-size: 15px;
+
       outline: none;
-      transition: 0.3s;
+
+      transition: 0.3s ease;
     }
 
     .input-group input:focus {
@@ -80,105 +202,227 @@
     }
 
     .password-note {
-      font-size: 14px;
+      font-size: 12px;
       color: #6b7280;
       margin-top: 10px;
-      line-height: 1.5;
+      line-height: 1.6;
     }
 
-    button {
+    .submit-btn {
       width: 100%;
-      background-color: #591cf4;
-      color: white;
-      padding: 16px;
+
       border: none;
-      border-radius: 14px;
-      font-size: 16px;
+
+      background: linear-gradient(to right, #591cf4, #7c3aed);
+
+      color: white;
+
+      padding: 16px;
+
+      border-radius: 16px;
+
+      font-size: 15px;
       font-weight: 600;
+
       cursor: pointer;
-      transition: 0.3s;
+
+      transition: 0.3s ease;
+
+      margin-top: 4px;
     }
 
-    button:hover {
-      background-color: #4100c3;
+    .submit-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 20px rgba(89, 28, 244, 0.2);
+    }
+
+    .signin-text {
+      text-align: center;
+      margin-top: 22px;
+      color: #6b7280;
+      font-size: 14px;
+    }
+
+    .signin-text a {
+      color: #591cf4;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    /* TABLET */
+    @media (max-width: 992px) {
+
+      body {
+        overflow-y: auto;
+        height: auto;
+      }
+
+      .page-wrapper {
+        height: auto;
+        padding: 24px 16px;
+      }
+
+      .container {
+        height: auto;
+        grid-template-columns: 1fr;
+        padding: 34px 24px;
+      }
+
+      .left-side {
+        padding-right: 0;
+      }
+
+      .left-content h1 {
+        font-size: 42px;
+      }
+
+      .left-content {
+        margin-bottom: 20px;
+      }
+
+      .left-illustration {
+        display: none;
+      }
+
+      .form-card {
+        max-width: 100%;
+      }
+    }
+
+    @media (max-width: 640px) {
+
+      .container {
+        border-radius: 24px;
+        padding: 26px 18px;
+      }
+
+      .logo img {
+        width: 160px;
+      }
+
+      .left-content h1 {
+        font-size: 34px;
+      }
+
+      .left-content p {
+        font-size: 15px;
+      }
+
+      .form-card {
+        padding: 24px 20px;
+        border-radius: 22px;
+      }
+
+      .form-card h2 {
+        font-size: 30px;
+      }
+
+      .bg-shape-top,
+      .bg-shape-bottom {
+        display: none;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <div class="container">
+  <!-- BACKGROUND SHAPES -->
+  <div class="bg-shape-top"></div>
+  <div class="bg-shape-bottom"></div>
 
-    <div class="heading">
+  <div class="page-wrapper">
 
-      <h1>
-        Create Account
-      </h1>
+    <div class="container">
 
-      <p>
-        Start creating sending invitations
-      </p>
+      <!-- LEFT SIDE -->
+      <div class="left-side">
+
+
+        <div class="logo">
+          <img src="assets/images/InviteMe.png" alt="InviteMe Logo">
+        </div>
+        <div class="hero-image">
+
+          <img src="assets/images/bento-card-image.png" alt="InviteMe Hero Image">
+
+        </div>
+      </div>
+
+      <div class="form-section">
+
+        <div class="form-card">
+
+          <h2>Create Account</h2>
+
+          <p>
+            Start creating and sending invitations with InviteMe.
+          </p>
+
+          <form action="index.html" target="_blank">
+
+            <!-- FULL NAME -->
+            <div class="input-group">
+
+              <label>
+                Full Name
+              </label>
+
+              <input type="text" placeholder="Bami Ewetuga" required>
+
+            </div>
+
+            <!-- EMAIL -->
+            <div class="input-group">
+
+              <label>
+                Email Address
+              </label>
+
+              <input type="email" placeholder="stephen@email.com" required>
+
+            </div>
+
+            <!-- PASSWORD -->
+            <div class="input-group">
+
+              <label>
+                Password
+              </label>
+
+              <input type="password" minlength="8" pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&]).+$"
+                placeholder="••••••••" required>
+
+              <p class="password-note">
+                Must contain letters, numbers, symbols and at least 8 characters.
+              </p>
+
+            </div>
+
+            <!-- BUTTON -->
+            <button type="submit" class="submit-btn">
+
+              Create Account
+
+            </button>
+
+          </form>
+
+          <div class="signin-text">
+
+            Already have an account?
+
+            <a href="login.html">
+              Sign In
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
 
     </div>
-
-    <form target="_blank" action="index.html">
-
-      <!-- Full Name -->
-      <div class="input-group">
-
-        <label>
-          Full Name
-        </label>
-
-        <input
-          type="text"
-          required
-          placeholder="Bami Ewetuga">
-
-      </div>
-
-      <!-- Email -->
-      <div class="input-group">
-
-        <label>
-          Email Address
-        </label>
-
-        <input
-          type="email"
-          required
-          placeholder="stephen@email.com">
-
-      </div>
-
-      <!-- Password -->
-      <div class="input-group">
-
-        <label>
-          Password
-        </label>
-
-        <input
-          type="password"
-          required
-          minlength="8"
-          pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&]).+$"
-          placeholder="••••••••">
-
-        <p class="password-note">
-          Must contain letters, numbers, symbols and at least 8 characters.
-        </p>
-
-      </div>
-
-      <!-- Button -->
-      <button type="submit">
-
-        Create Account
-
-      </button>
-
-    </form>
 
   </div>
 
