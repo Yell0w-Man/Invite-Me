@@ -1,3 +1,10 @@
+<script setup>
+import weddingTemplate2 from "../assets/images/wedding-template2.jpg";
+import partyTemplate from "../assets/images/party-template.jpg";
+import corporateEvent from "../assets/images/corporate-event.jpg";
+import weddingTemplate1 from "../assets/images/wedding-template1.jpg";
+</script>
+
 <template>
    <section class="mt-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
       <div class="flex justify-between items-end mb-12">
@@ -10,9 +17,11 @@
         <!-- Card 1 -->
         <div
           class="group relative overflow-hidden rounded-xl border border-outline-variant/30 transition-all hover:border-primary-container">
-          <img class="w-full aspect-[3/4] object-cover transition-transform group-hover:scale-105"
-            data-alt="A premium wedding invitation design with elegant gold foil typography and delicate floral patterns set against a soft cream background. The mood is romantic, sophisticated, and high-end, utilizing a warm light-mode aesthetic with refined textures and professional layout."
-            src="assets/images/wedding-template2.jpg">
+          <img
+  class="w-full aspect-[3/4] object-cover transition-transform group-hover:scale-105"
+  data-alt="A premium wedding invitation design..."
+  :src="weddingTemplate2"
+/>
           <div
             class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex flex-col justify-end p-6 text-white translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all">
             <p class="font-label-md">Royal Wedding</p>
@@ -24,7 +33,7 @@
           class="group relative overflow-hidden rounded-xl border border-outline-variant/30 transition-all hover:border-primary-container">
           <img class="w-full aspect-[3/4] object-cover transition-transform group-hover:scale-105"
             data-alt="A vibrant birthday party invitation design with bold, playful typography and colorful confetti elements. The style is modern and high-energy, using a clean white background to make primary colors like electric blue and bright yellow pop. It feels celebratory and inviting."
-            src="assets/images/party-template.jpg">
+            :src="partyTemplate">
           <div
             class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex flex-col justify-end p-6 text-white translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all">
             <p class="font-label-md">Modern Party</p>
@@ -36,7 +45,7 @@
           class="group relative overflow-hidden rounded-xl border border-outline-variant/30 transition-all hover:border-primary-container">
           <img class="w-full aspect-[3/4] object-cover transition-transform group-hover:scale-105"
             data-alt="A minimalist corporate event invitation featuring clean architectural lines and a monochromatic palette with subtle purple accents. The design is airy and spacious, emphasizing clarity and professional reliability through sophisticated typography and generous white space."
-            src="assets/images/corporate event.jpg">
+         :src="corporateEvent">
           <div
             class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex flex-col justify-end p-6 text-white translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all">
             <p class="font-label-md">Corporate Gala</p>
@@ -48,7 +57,7 @@
           class="group relative overflow-hidden rounded-xl border border-outline-variant/30 transition-all hover:border-primary-container">
           <img class="w-full aspect-[3/4] object-cover transition-transform group-hover:scale-105"
             data-alt="A whimsical garden party invitation with soft watercolor illustrations of botanical elements. The palette uses pastel greens and purples on a textured paper background, creating a welcoming and artistic aesthetic that feels effortless and creative."
-            src="assets/images/wedding-template1.jpg">
+            :src="weddingTemplate1">
           <div
             class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex flex-col justify-end p-6 text-white translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all">
             <p class="font-label-md">Garden Soiree</p>
@@ -59,11 +68,6 @@
     </section>
 </template>
 
-<script>
-export default {
-  name: "Collections"
-}
-</script>
 <style scoped>
 
 </style>

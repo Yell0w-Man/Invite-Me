@@ -1,34 +1,154 @@
 @import "tailwindcss";
+
+@theme {
+  /* --- Dark Mode Configuration --- */
+  --variant-dark: .dark &;
+
+  /* --- Colors (Material Design Palette) --- */
+  --color-background: #fdf8ff;
+  --color-on-secondary-fixed-variant: #444748;
+  --color-surface-container-low: #f7f1ff;
+  --color-tertiary-fixed: #ffdbd0;
+  --color-surface-bright: #fdf8ff;
+  --color-primary: #4100c3;
+  --color-on-primary: #ffffff;
+  --color-secondary-container: #dee0e0;
+  --color-surface-container-highest: #e6e0f0;
+  --color-secondary: #5c5f5f;
+  --color-surface-container-high: #ece6f5;
+  --color-primary-fixed-dim: #cabeff;
+  --color-error-container: #ffdad6;
+  --color-on-secondary-fixed: #191c1d;
+  --color-on-error-container: #93000a;
+  --color-surface-container: #f1ebfb;
+  --color-on-secondary: #ffffff;
+  --color-tertiary-fixed-dim: #ffb59c;
+  --color-outline-variant: #cac3da;
+  --color-surface-container-lowest: #ffffff;
+  --color-outline: #797488;
+  --color-on-tertiary: #ffffff;
+  --color-on-secondary-container: #606363;
+  --color-error: #ba1a1a;
+  --color-on-tertiary-container: #ffbea9;
+  --color-inverse-on-surface: #f4eefe;
+  --color-surface-variant: #e6e0f0;
+  --color-on-tertiary-fixed: #390c00;
+  --color-on-primary-fixed-variant: #4800d6;
+  --color-primary-container: #591cf4;
+  --color-on-tertiary-fixed-variant: #832700;
+  --color-surface: #fdf8ff;
+  --color-on-background: #1c1a25;
+  --color-on-primary-container: #d1c6ff;
+  --color-surface-dim: #ddd7e7;
+  --color-inverse-primary: #cabeff;
+  --color-primary-fixed: #e6deff;
+  --color-inverse-surface: #312f3b;
+  --color-tertiary: #762200;
+  --color-secondary-fixed: #e1e3e3;
+  --color-on-surface: #1c1a25;
+  --color-surface-tint: #612bfb;
+  --color-secondary-fixed-dim: #c4c7c7;
+  --color-on-surface-variant: #484457;
+  --color-tertiary-container: #9e3100;
+  --color-on-error: #ffffff;
+  --color-on-primary-fixed: #1c0062;
+
+  /* --- Border Radius --- */
+  --radius-default: 0.25rem;
+  --radius-lg: 8px;
+  --radius-xl: 12px;
+  --radius-full: 9999px;
+
+  /* --- Spacing --- */
+  --spacing-stack-md: 16px;
+  --spacing-section-gap: 80px;
+  --spacing-stack-sm: 8px;
+  --spacing-margin-desktop: 64px;
+  --spacing-container-max: 1200px;
+  --spacing-gutter: 24px;
+  --spacing-margin-mobile: 20px;
+  --spacing-stack-lg: 32px;
+
+  /* --- Font Families --- */
+  --font-headline-lg: "Hanken Grotesk", sans-serif;
+  --font-label-md: "Hanken Grotesk", sans-serif;
+  --font-body-lg: "Hanken Grotesk", sans-serif;
+  --font-display-lg: "Hanken Grotesk", sans-serif;
+  --font-body-md: "Hanken Grotesk", sans-serif;
+  --font-label-sm: "Hanken Grotesk", sans-serif;
+  --font-headline-md: "Hanken Grotesk", sans-serif;
+  --font-headline-lg-mobile: "Hanken Grotesk", sans-serif;
+
+  /* --- Typography Sizing & Options --- */
+  --text-headline-lg: 32px;
+  --text-headline-lg--line-height: 40px;
+  --text-headline-lg--letter-spacing: -0.01em;
+  --text-headline-lg--font-weight: 600;
+
+  --text-label-md: 14px;
+  --text-label-md--line-height: 20px;
+  --text-label-md--letter-spacing: 0.01em;
+  --text-label-md--font-weight: 600;
+
+  --text-body-lg: 18px;
+  --text-body-lg--line-height: 28px;
+  --text-body-lg--font-weight: 400;
+
+  --text-display-lg: 48px;
+  --text-display-lg--line-height: 56px;
+  --text-display-lg--letter-spacing: -0.02em;
+  --text-display-lg--font-weight: 700;
+
+  --text-body-md: 16px;
+  --text-body-md--line-height: 24px;
+  --text-body-md--font-weight: 400;
+
+  --text-label-sm: 12px;
+  --text-label-sm--line-height: 16px;
+  --text-label-sm--font-weight: 500;
+
+  --text-headline-md: 24px;
+  --text-headline-md--line-height: 32px;
+  --text-headline-md--font-weight: 600;
+
+  --text-headline-lg-mobile: 28px;
+  --text-headline-lg-mobile--line-height: 36px;
+  --text-headline-lg-mobile--font-weight: 600;
+}
+
+/* --- Your Custom Base & Utility Styles --- */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
 #app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
+  width: 100%;
+  min-height: 100vh;
 }
 
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
+.material-symbols-outlined {
+  font-variation-settings:
+    "FILL" 0,
+    "wght" 400,
+    "GRAD" 0,
+    "opsz" 24;
 }
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
+.glass-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
 }
 
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
+.bento-card {
+  transition: all 0.3s ease;
+}
 
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
+.bento-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0px 10px 30px rgba(30, 30, 30, 0.05);
 }
