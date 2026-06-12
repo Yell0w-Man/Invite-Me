@@ -130,11 +130,11 @@
             </div>
 
             <div class="space-y-4 text-right">
-              <a href="#" class="block hover:text-primary transition">
+              <a href="" class="block hover:text-primary transition">
                 X (Twitter) ↗
               </a>
 
-              <a href="#" class="block hover:text-primary transition">
+              <a href="https://www.instagram.com" class="block hover:text-primary transition">
                 Instagram ↗
               </a>
 

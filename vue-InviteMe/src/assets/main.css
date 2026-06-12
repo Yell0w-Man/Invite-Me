@@ -1,10 +1,8 @@
 @import "tailwindcss";
 
 @theme {
-  /* --- Dark Mode Configuration --- */
   --variant-dark: .dark &;
 
-  /* --- Colors (Material Design Palette) --- */
   --color-background: #fdf8ff;
   --color-on-secondary-fixed-variant: #444748;
   --color-surface-container-low: #f7f1ff;

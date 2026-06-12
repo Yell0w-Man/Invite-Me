@@ -25,15 +25,6 @@
               class="w-28"
             />
           </div>
-
-          <!-- Illustration -->
-          <div class="flex justify-center items-center flex-1">
-            <img
-              src="/src/assets/images/bento-card-image.png"
-              alt="InviteMe Hero"
-              class="w-full max-w-[440px]"
-            />
-          </div>
         </div>
 
         <!-- RIGHT SIDE -->
@@ -90,7 +81,7 @@
                 />
 
                 <p class="mt-2 text-xs text-gray-500 leading-relaxed">
-                  Must contain letters, numbers, symbols and at least 8
+                  Must contain at least One upper-case letter, numbers, symbols and at least 8  
                   characters.
                 </p>
               </div>
@@ -142,16 +133,44 @@ const isFormValid = computed(() => {
   );
 });
 
-const handleSubmit = () => {
+const handleSubmit = async () => {
   if (!isFormValid.value) return;
 
-  console.log({
-    fullName: fullName.value,
-    email: email.value,
-    password: password.value,
-  });
+  try {
+   const response = await fetch(
+  "http://localhost:8000/api/v1/auth/register",
+  {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      name: fullName.value,
+      email: email.value,
+      password: password.value,
+    }),
+  }
+);
 
-  // Later this will become your API call
-  router.push("/");
+    const data = await response.json();
+
+    if (!response.ok) {
+      throw new Error(
+        data.message ||
+        data.detail ||
+        "Registration failed"
+      );
+    }
+
+    console.log("Registration successful:", data);
+
+    alert("Account created successfully!");
+
+    router.push("/login");
+ 
+  } catch (error) {
+  console.error("Registration error:", error);
+  alert(error.message || "Registration failed. Please try again.");
+}
 };
 </script>

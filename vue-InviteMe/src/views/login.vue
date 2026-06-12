@@ -7,14 +7,30 @@ const router = useRouter();
 const email = ref("");
 const password = ref("");
 
-const handleLogin = () => {
-  console.log({
-    email: email.value,
-    password: password.value,
+const handleLogin = async () => {
+  const res = await fetch("http://localhost:8000/api/v1/auth/login", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      email: email.value,
+      password: password.value,
+    }),
   });
 
-  // redirect to landing page
-  router.push("/");
+  const data = await res.json();
+
+  if (!res.ok) return;
+
+ localStorage.setItem("token", data.data.access_token);
+
+localStorage.setItem(
+  "user",
+  JSON.stringify(data.data.user)
+);
+
+router.push("/dashboard");
 };
 </script>
 
@@ -51,11 +67,6 @@ const handleLogin = () => {
 
           <!-- Smaller Hero Section -->
           <div class="flex flex-col items-center text-center">
-            <img
-              src="@/assets/images/bento-card-image.png"
-              alt="InviteMe Illustration"
-              class="w-full max-w-[340px] object-contain"
-            />
 
             <h2
               class="text-headline-md text-on-surface mt-6 mb-3 font-semibold"
@@ -145,9 +156,8 @@ const handleLogin = () => {
 
               <!-- Login Button -->
               <button
-                 target="_blank"            
                 type="submit"
-                class="w-full h-14 rounded-xl bg-primary text-on-primary text-[16px] font-semibold hover:bg-primary-container hover:text-primary transition active:scale-95"
+                class="w-full h-14 rounded-xl bg-purple-600 text-white text-[16px] font-semibold shadow-md hover:bg-purple-500 transition-all duration-200 active:scale-95"
               >
                 Login
               </button>

@@ -19,15 +19,16 @@ import logoImg from "../assets/images/InviteMe.png";
       <div class="hidden md:flex gap-stack-lg items-center">
         <a
           class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors"
-          href=""
+          href="#about"
         >
           About
         </a>
         <a
           class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors nav-link"
           href="#features"
-          >Feature</a
         >
+          Features
+        </a>
         <a
           class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors nav-link"
           href="#sendInvite"
@@ -35,23 +36,23 @@ import logoImg from "../assets/images/InviteMe.png";
         >
       </div>
       <div class="flex gap-4 items-center">
-     <a
-  href="/login"
-  target="_blank"
-  rel="noopener noreferrer"
-  class="hidden md:block px-6 py-2 bg-primary-container text-white border border-primary-container rounded-xl hover:opacity-90 transition-all"
->
-  Login
-</a>
+        <a
+          href="/login"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hidden md:block px-6 py-2 bg-primary-container text-white border border-primary-container rounded-xl hover:opacity-90 transition-all"
+        >
+          Login
+        </a>
 
-<a
-  href="/register"
-  target="_blank"
-  rel="noopener noreferrer"
-  class="px-6 py-2 bg-primary-container text-white border border-primary-container rounded-xl shadow-md hover:opacity-90 transition-all"
->
-  Sign Up
-</a>
+        <a
+          href="/register"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="px-6 py-2 bg-primary-container text-white border border-primary-container rounded-xl shadow-md hover:opacity-90 transition-all"
+        >
+          Sign Up
+        </a>
       </div>
     </div>
   </nav>
