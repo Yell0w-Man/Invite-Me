@@ -1,91 +1,70 @@
+```vue
 <script setup>
 import weddingTemplate2 from "../assets/images/wedding-template2.jpg";
 import partyTemplate from "../assets/images/party-template.jpg";
 import corporateEvent from "../assets/images/corporate-event.jpg";
 import weddingTemplate1 from "../assets/images/wedding-template1.jpg";
+
+const collections = [
+  {
+    title: "Royal Wedding",
+    image: weddingTemplate2,
+  },
+  {
+    title: "Modern Party",
+    image: partyTemplate,
+  },
+  {
+    title: "Corporate Gala",
+    image: corporateEvent,
+  },
+  {
+    title: "Garden Soiree",
+    image: weddingTemplate1,
+  },
+];
 </script>
 
 <template>
-  <section
-    class="mt-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto"
-  >
-    <div class="flex justify-between items-end mb-12">
-      <div id="features">
-        <h2 class="font-display-lg text-display-lg">Browse Collections</h2>
-        <p class="text-on-surface-variant mt-2">
-          Beautifully crafted templates for every milestone.
-        </p>
-      </div>
+  <section class="mx-auto mt-20 max-w-[1200px] px-5 md:px-16">
+    <!-- Section Header -->
+    <div id="features" class="mb-12">
+      <h2
+        class="font-['Hanken_Grotesk'] text-[48px] font-bold leading-[56px] tracking-[-0.02em]"
+      >
+        Browse Collections
+      </h2>
+
+      <p
+        class="mt-2 text-[18px] leading-[28px] text-on-surface-variant"
+      >
+        Beautifully crafted templates for every milestone.
+      </p>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-      <!-- Card 1 -->
+
+    <!-- Cards -->
+    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
       <div
-        class="group relative overflow-hidden rounded-xl border border-outline-variant/30 transition-all hover:border-primary-container"
+        v-for="collection in collections"
+        :key="collection.title"
+        class="group relative overflow-hidden rounded-xl border border-outline-variant/30 transition-all duration-300 hover:-translate-y-1 hover:border-primary-container"
       >
         <img
-          class="w-full aspect-[3/4] object-cover transition-transform group-hover:scale-105"
-          data-alt="A premium wedding invitation design..."
-          :src="weddingTemplate2"
+          :src="collection.image"
+          :alt="collection.title"
+          class="aspect-[3/4] w-full object-cover transition-transform duration-300 group-hover:scale-105"
         />
+
         <div
-          class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex flex-col justify-end p-6 text-white translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all"
+          class="absolute inset-0 flex translate-y-4 flex-col justify-end bg-gradient-to-t from-black/70 to-transparent p-6 text-white opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100"
         >
-          <p class="font-label-md">Royal Wedding</p>
-          <button class="mt-2 text-sm underline decoration-primary-container">
-            Select Template
-          </button>
-        </div>
-      </div>
-      <!-- Card 2 -->
-      <div
-        class="group relative overflow-hidden rounded-xl border border-outline-variant/30 transition-all hover:border-primary-container"
-      >
-        <img
-          class="w-full aspect-[3/4] object-cover transition-transform group-hover:scale-105"
-          data-alt="A vibrant birthday party invitation design with bold, playful typography and colorful confetti elements. The style is modern and high-energy, using a clean white background to make primary colors like electric blue and bright yellow pop. It feels celebratory and inviting."
-          :src="partyTemplate"
-        />
-        <div
-          class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex flex-col justify-end p-6 text-white translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all"
-        >
-          <p class="font-label-md">Modern Party</p>
-          <button class="mt-2 text-sm underline decoration-primary-container">
-            Select Template
-          </button>
-        </div>
-      </div>
-      <!-- Card 3 -->
-      <div
-        class="group relative overflow-hidden rounded-xl border border-outline-variant/30 transition-all hover:border-primary-container"
-      >
-        <img
-          class="w-full aspect-[3/4] object-cover transition-transform group-hover:scale-105"
-          data-alt="A minimalist corporate event invitation featuring clean architectural lines and a monochromatic palette with subtle purple accents. The design is airy and spacious, emphasizing clarity and professional reliability through sophisticated typography and generous white space."
-          :src="corporateEvent"
-        />
-        <div
-          class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex flex-col justify-end p-6 text-white translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all"
-        >
-          <p class="font-label-md">Corporate Gala</p>
-          <button class="mt-2 text-sm underline decoration-primary-container">
-            Select Template
-          </button>
-        </div>
-      </div>
-      <!-- Card 4 -->
-      <div
-        class="group relative overflow-hidden rounded-xl border border-outline-variant/30 transition-all hover:border-primary-container"
-      >
-        <img
-          class="w-full aspect-[3/4] object-cover transition-transform group-hover:scale-105"
-          data-alt="A whimsical garden party invitation with soft watercolor illustrations of botanical elements. The palette uses pastel greens and purples on a textured paper background, creating a welcoming and artistic aesthetic that feels effortless and creative."
-          :src="weddingTemplate1"
-        />
-        <div
-          class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex flex-col justify-end p-6 text-white translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all"
-        >
-          <p class="font-label-md">Garden Soiree</p>
-          <button class="mt-2 text-sm underline decoration-primary-container">
+          <p class="text-[14px] font-semibold">
+            {{ collection.title }}
+          </p>
+
+          <button
+            class="mt-2 w-fit text-sm underline underline-offset-4"
+          >
             Select Template
           </button>
         </div>
@@ -93,5 +72,3 @@ import weddingTemplate1 from "../assets/images/wedding-template1.jpg";
     </div>
   </section>
 </template>
-
-<style scoped></style>

@@ -122,6 +122,9 @@ html {
 body {
   margin: 0;
   padding: 0;
+  font-family: "Hanken Grotesk", sans-serif;
+  background: var(--color-background);
+  color: var(--color-on-background);
 }
 
 #app {

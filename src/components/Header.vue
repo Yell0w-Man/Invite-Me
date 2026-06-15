@@ -4,58 +4,66 @@ import logoImg from "../assets/images/InviteMe.png";
 
 <template>
   <nav
-    class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-outline-variant/30"
+    class="fixed top-0 z-50 w-full border-b border-outline-variant/30 bg-background/80 backdrop-blur-md"
   >
     <div
-      class="flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20 max-w-container-max mx-auto"
+      class="mx-auto flex h-20 max-w-[1200px] items-center justify-between px-5 md:px-16"
     >
+      <!-- Logo -->
       <div class="flex items-center gap-2">
-        <img alt="Invite Me Logo" class="h-12" :src="logoImg" />
-        <span
-          class="text-headline-md font-headline-lg font-bold text-on-background"
-          ><br
-        /></span>
+        <img
+          :src="logoImg"
+          alt="Invite Me Logo"
+          class="h-12 w-auto"
+        />
       </div>
-      <div class="hidden md:flex gap-stack-lg items-center">
+
+      <!-- Desktop Navigation -->
+      <div class="hidden items-center gap-8 md:flex">
         <a
-          class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors"
           href="#about"
+          class="text-[14px] font-semibold text-on-surface-variant transition-colors hover:text-primary"
         >
           About
         </a>
+
         <a
-          class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors nav-link"
           href="#features"
+          class="text-[14px] font-semibold text-on-surface-variant transition-colors hover:text-primary"
         >
           Features
         </a>
-        <a
-          class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors nav-link"
-          href="#sendInvite"
-          >How it works</a
-        >
-      </div>
-      <div class="flex gap-4 items-center">
-        <a
-          href="/login"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="hidden md:block px-6 py-2 bg-primary-container text-white border border-primary-container rounded-xl hover:opacity-90 transition-all"
-        >
-          Login
-        </a>
 
         <a
-          href="/register"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="px-6 py-2 bg-primary-container text-white border border-primary-container rounded-xl shadow-md hover:opacity-90 transition-all"
+          href="#sendInvite"
+          class="text-[14px] font-semibold text-on-surface-variant transition-colors hover:text-primary"
+        >
+          How it works
+        </a>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="flex items-center gap-4">
+        <RouterLink
+          to="/login"
+          class="hidden rounded-xl border-2 border-primary-container px-6 py-2 text-[14px] font-semibold text-primary-container transition-all hover:bg-primary/5 active:scale-95 md:block"
+        >
+          Login
+        </RouterLink>
+
+        <RouterLink
+          to="/register"
+          class="rounded-xl bg-primary-container px-6 py-2 text-[14px] font-semibold text-white shadow-lg transition-all hover:shadow-primary/20 active:scale-95"
         >
           Sign Up
-        </a>
+        </RouterLink>
       </div>
     </div>
   </nav>
 </template>
 
-<style scoped></style>
+<style scoped>
+nav {
+  font-family: "Hanken Grotesk", sans-serif;
+}
+</style>

@@ -1,61 +1,47 @@
+<script setup>
+import heroImage from "@/assets/images/bento-card-image.png";
+</script>
+
 <template>
-  <section
-    class="pt-32 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-
-    <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
-
+  <section class="mx-auto max-w-[1200px] px-5 pt-32 md:px-16">
+    <div class="grid grid-cols-1 items-center gap-6 md:grid-cols-12">
+      
       <div class="md:col-span-6">
-
         <span
-          class="bg-primary/10 text-primary-container px-4 py-1 rounded-full">
-
-          NEW EXPERIENCE
-
+          class="inline-block rounded-full bg-primary/10 px-4 py-1 text-[12px] font-medium uppercase tracking-wide text-primary-container"
+        >
+          New Experience
         </span>
 
         <h1
-          class="font-display-lg text-display-lg md:text-[64px] leading-tight mt-6">
-
+          class="mt-6 font-['Hanken_Grotesk'] text-[48px] font-bold leading-[56px] tracking-[-0.02em] md:text-[64px] md:leading-[72px]"
+        >
           Send Invitations via Whatsapp.
-
         </h1>
 
         <p
-          class="font-body-lg text-body-lg text-on-surface-variant mt-6">
-
+          class="mt-8 max-w-xl text-[18px] leading-[28px] text-on-surface-variant"
+        >
           Create stunning, mobile-first invitations sent directly via WhatsApp.
-
           Manage guests, track RSVPs, and share the excitement in seconds.
-
         </p>
 
         <button
-          class="mt-8 px-8 py-4 bg-primary-container text-white rounded-xl">
-
+          class="mt-10 flex items-center gap-2 rounded-xl bg-primary-container px-8 py-4 text-[24px] font-semibold text-white transition-transform hover:-translate-y-0.5"
+        >
           Create Now
-
         </button>
-
       </div>
 
-      <div class="md:col-span-6 flex justify-center">
-
+      <!-- Right Image -->
+      <div class="mt-10 flex justify-center md:col-span-6 md:mt-0 md:justify-end">
         <img
-          src="@/assets/images/bento-card-image.png"
-          class="max-w-[550px]">
-
+          :src="heroImage"
+          alt="Woman using phone"
+          class="w-full max-w-[500px] object-contain md:max-w-[600px]"
+        />
       </div>
-
     </div>
-
   </section>
 </template>
 
-<script>
-export default {
-  name: "Hero"
-}
-</script>
-<style scoped>
-
-</style>
