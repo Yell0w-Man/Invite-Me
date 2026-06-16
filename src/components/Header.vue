@@ -10,13 +10,15 @@ import logoImg from "../assets/images/InviteMe.png";
       class="mx-auto flex h-20 max-w-[1200px] items-center justify-between px-5 md:px-16"
     >
       <!-- Logo -->
-      <div class="flex items-center gap-2">
+      <a href="#">
+        <div class="flex items-center gap-2">
         <img
           :src="logoImg"
           alt="Invite Me Logo"
           class="h-12 w-auto"
         />
       </div>
+      </a>
 
       <!-- Desktop Navigation -->
       <div class="hidden items-center gap-8 md:flex">

@@ -28,7 +28,7 @@ const collections = [
 <template>
   <section class="mx-auto mt-20 max-w-[1200px] px-5 md:px-16">
     <!-- Section Header -->
-    <div id="features" class="mb-12">
+    <div class="mb-12">
       <h2
         class="font-['Hanken_Grotesk'] text-[48px] font-bold leading-[56px] tracking-[-0.02em]"
       >
@@ -56,17 +56,13 @@ const collections = [
         />
 
         <div
-          class="absolute inset-0 flex translate-y-4 flex-col justify-end bg-gradient-to-t from-black/70 to-transparent p-6 text-white opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100"
+          class="absolute inset-0 flex translate-y-4 flex-col justify-end bg-gradient-to-t from-black/70 to-transparent p-6 text-purple-600 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100"
         >
           <p class="text-[14px] font-semibold">
             {{ collection.title }}
           </p>
 
-          <button
-            class="mt-2 w-fit text-sm underline underline-offset-4"
-          >
-            Select Template
-          </button>
+         
         </div>
       </div>
     </div>

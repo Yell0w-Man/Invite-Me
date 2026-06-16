@@ -6,10 +6,12 @@ import daniellaImg from "../assets/images/Daniella Thompson.jpg";
 </script>
 
 <template>
-  <section class="mx-auto mt-20 max-w-[1200px] px-5 py-24 text-center md:px-16">
-    <span class="mb-8 inline-block rounded-full bg-surface-container px-6 py-2 text-[14px] font-semibold shadow-sm">
-      Testimonials
-    </span>
+  <section id="features" class="mx-auto mt-20 max-w-[1200px] px-5 py-24 text-center md:px-16">
+    <span
+          class="inline-block rounded-full bg-primary/10 px-4 py-1 text-[14px] font-semibold text-primary"
+        >
+          Testimonials
+        </span>
 
     <!-- Heading -->
     <h2 class="mb-16 font-['Hanken_Grotesk'] text-[48px] font-bold leading-[56px] tracking-[-0.02em]">

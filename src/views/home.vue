@@ -4,6 +4,7 @@
 
     <main>
       <Hero />
+      <About/>
       <Collections />
       <Testimonials />
       <HowItWorks />
@@ -17,11 +18,13 @@
 <script setup>
 import Header from "@/components/Header.vue";
 import Hero from "@/components/Hero.vue";
+import About from "@/components/About.vue"; 
 import Collections from "@/components/Collections.vue";
 import Testimonials from "@/components/Testimonials.vue";
-import HowItWorks from "@/components/HowItWorks.vue"
+import HowItWorks from "@/components/HowItWorks.vue"  
 import CTA from "@/components/CTA.vue";
 import Footer from "@/components/Footer.vue";
+
 
 
 </script>
