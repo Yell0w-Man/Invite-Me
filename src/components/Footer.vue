@@ -57,8 +57,8 @@
 
           <div>
             <h2 class="text-[48px] md:text-[72px] leading-[1] font-semibold tracking-tight text-black max-w-4xl">
-              We do everything
-              for all invitations.
+              We do invitations
+              for all events.
             </h2>
 
             <div class="flex flex-wrap gap-4 mt-8">
