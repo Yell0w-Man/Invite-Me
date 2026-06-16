@@ -19,7 +19,7 @@
       <div class="relative z-10 flex flex-col justify-center gap-4 sm:flex-row">
         <button
           class="rounded-xl border border-white/20 bg-white/10 px-10 py-5 text-[24px] font-semibold backdrop-blur-sm transition-all hover:bg-white/20">
-          Contact Sales
+          Send An Invite
         </button>
       </div>
     </div>

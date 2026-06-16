@@ -26,11 +26,11 @@ import heroImage from "@/assets/images/bento-card-image.png";
           Manage guests, track RSVPs, and share the excitement in seconds.
         </p>
 
-        <button
+        <!-- <button
           class="mt-10 flex items-center gap-2 rounded-xl bg-primary-container px-8 py-4 text-[24px] font-semibold text-white transition-transform hover:-translate-y-0.5"
         >
           Create Now
-        </button>
+        </button> -->
       </div>
 
       <!-- Right Image -->

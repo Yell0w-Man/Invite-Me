@@ -11,12 +11,8 @@
       </p>
     </div>
 
-    <!-- Steps -->
     <div class="relative grid grid-cols-1 gap-12 md:grid-cols-3 md:gap-8">
-      <!-- Connector -->
-      <div class="absolute left-1/4 top-6 hidden h-px w-1/2 bg-outline-variant md:block"></div>
 
-      <!-- Step 1 -->
       <div class="flex flex-col items-center text-center">
         <div
           class="mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-primary-container text-lg font-bold text-white shadow-lg">
@@ -32,7 +28,6 @@
         </p>
       </div>
 
-      <!-- Step 2 -->
       <div class="flex flex-col items-center text-center">
         <div
           class="mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-primary-container text-lg font-bold text-white shadow-lg">
@@ -47,8 +42,6 @@
           Import your contacts and personalize each invitation in seconds.
         </p>
       </div>
-
-      <!-- Step 3 -->
       <div class="flex flex-col items-center text-center">
         <div
           class="mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-primary-container text-lg font-bold text-white shadow-lg">

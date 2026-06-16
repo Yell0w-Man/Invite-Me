@@ -12,14 +12,14 @@
 
             <div>
               <span class="text-white text-sm tracking-wide uppercase">
-                New Experience
+                Enjoy A New Experience
               </span>
             </div>
 
             <div class="flex-1 flex items-center">
               <h1 class="text-[72px] md:text-[84px] leading-none font-black tracking-[-5px]">
                 <span class="text-white">Invite</span>
-                <span class="bg-gradient-to-b from-[#8B5CF6] to-[#5B21B6] bg-clip-text text-transparent">
+                <span class="text-purple-600">
                   Me
                 </span>
               </h1>
@@ -57,8 +57,8 @@
 
           <div>
             <h2 class="text-[48px] md:text-[72px] leading-[1] font-semibold tracking-tight text-black max-w-4xl">
-              We’re doing everything
-              for future invitations.
+              We do everything
+              for all invitations.
             </h2>
 
             <div class="flex flex-wrap gap-4 mt-8">
@@ -98,11 +98,11 @@
 
           <div class="flex flex-col md:flex-row justify-between gap-6 mt-12 text-lg">
             <p class="text-on-surface">
-              hello@inviteme.com
+              hello@inviteme.name.ng
             </p>
 
             <p class="text-on-surface">
-              ©2025 Invite Me
+              @{{currentYear}} Invite Me
             </p>
           </div>
 
@@ -114,32 +114,24 @@
           <div class="grid grid-cols-2 gap-6 text-lg">
 
             <div class="space-y-4">
-              <a
-                target="_blank"
-                href="https://invite-me.notion.site/FAQ-161a86573d90820aa9f901c04e0c1f18?pvs=25"
+              <a target="_blank" href="https://invite-me.notion.site/FAQ-161a86573d90820aa9f901c04e0c1f18?pvs=25"
                 class="block hover:text-primary transition">
                 FAQ
               </a>
 
-              <a
-                target="_blank"
-                href="https://invite-me.notion.site/InviteMe-a27a86573d9082ad80fc81d9ba0c0405?pvs=143"
+              <a target="_blank" href="https://invite-me.notion.site/InviteMe-a27a86573d9082ad80fc81d9ba0c0405?pvs=143"
                 class="block hover:text-primary transition">
                 About
               </a>
             </div>
 
             <div class="space-y-4 text-right">
-              <a href="" class="block hover:text-primary transition">
+              <a target="_blank" href="https://x.com/InviteMe707" class="block hover:text-primary transition">
                 X (Twitter) ↗
               </a>
 
-              <a href="https://www.instagram.com" class="block hover:text-primary transition">
+              <a target="_blank" href="https://www.instagram.com/invite_me712/" class="block hover:text-primary transition">
                 Instagram ↗
-              </a>
-
-              <a href="#" class="block hover:text-primary transition">
-                LinkedIn ↗
               </a>
             </div>
 
@@ -153,18 +145,14 @@
 
       <div class="flex flex-col md:flex-row justify-between items-center gap-6 text-lg">
 
-        <a
-          target="_blank"
-          href="https://invite-me.notion.site/Privacy-Policy-f16a86573d908220866b81c915c3dca0?pvs=25"
+        <a target="_blank" href="https://invite-me.notion.site/Privacy-Policy-f16a86573d908220866b81c915c3dca0?pvs=25"
           class="hover:text-primary transition">
           Privacy Policy
         </a>
 
-        <p>EST — 2026</p>
+        <p>EST — {{currentYear}}</p>
 
-        <a
-          target="_blank"
-          href="https://invite-me.notion.site/Terms-Of-Service-b9ba86573d9083acb20e01db331ede5f?pvs=25"
+        <a target="_blank" href="https://invite-me.notion.site/Terms-Of-Service-b9ba86573d9083acb20e01db331ede5f?pvs=25"
           class="hover:text-primary transition">
           Terms & Conditions
         </a>
@@ -173,7 +161,7 @@
 
       <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mt-10">
         <p class="text-lg text-on-surface">
-          ©2026 All Right Reserved
+          ©{{currentYear}} All Right Reserved
         </p>
       </div>
 
@@ -182,5 +170,5 @@
 </template>
 
 <script setup>
-
+ const currentYear = new Date().getFullYear();
 </script>

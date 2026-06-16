@@ -31,7 +31,7 @@ import logoImg from "../assets/images/InviteMe.png";
           href="#features"
           class="text-[14px] font-semibold text-on-surface-variant transition-colors hover:text-primary"
         >
-          Features
+          Testimonials
         </a>
 
         <a
