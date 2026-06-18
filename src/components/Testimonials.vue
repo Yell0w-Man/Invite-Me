@@ -19,11 +19,11 @@ import daniellaImg from "../assets/images/Daniella Thompson.jpg";
     </h2>
 
     <!-- Bento Grid -->
-    <div class="grid grid-cols-1 gap-6 text-left md:grid-cols-3">
+    <!-- <div class="grid grid-cols-1 gap-6 text-left md:grid-cols-3"> -->
 
       <!-- Large Card -->
-      <div
-        class="bento-card flex flex-col justify-between rounded-xl border border-outline-variant/30 bg-white p-8 shadow-sm md:row-span-2">
+      <!-- <div
+        class="bento-card flex flex-col justify-between rounded-xl border border-outline-variant/30 bg-white p-8 shadow-sm md:row-span-2"> -->
         <p class="text-[18px] italic leading-[28px] text-on-surface">
           "This platform was particularly helpful for handing out invitations
           for my wedding some months earlier. I couldn't have imagined doing all

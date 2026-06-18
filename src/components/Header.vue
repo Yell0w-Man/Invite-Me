@@ -1,5 +1,7 @@
 <script setup>
 import logoImg from "../assets/images/InviteMe.png";
+
+const user = JSON.parse(localStorage.getItem("user"));
 </script>
 
 <template>
@@ -12,12 +14,12 @@ import logoImg from "../assets/images/InviteMe.png";
       <!-- Logo -->
       <a href="#">
         <div class="flex items-center gap-2">
-        <img
-          :src="logoImg"
-          alt="Invite Me Logo"
-          class="h-12 w-auto"
-        />
-      </div>
+          <img
+            :src="logoImg"
+            alt="Invite Me Logo"
+            class="h-12 w-auto"
+          />
+        </div>
       </a>
 
       <!-- Desktop Navigation -->
@@ -29,12 +31,12 @@ import logoImg from "../assets/images/InviteMe.png";
           About
         </a>
 
-        <a
+        <!-- <a
           href="#features"
           class="text-[14px] font-semibold text-on-surface-variant transition-colors hover:text-primary"
         >
           Testimonials
-        </a>
+        </a> -->
 
         <a
           href="#sendInvite"
@@ -46,19 +48,33 @@ import logoImg from "../assets/images/InviteMe.png";
 
       <!-- Action Buttons -->
       <div class="flex items-center gap-4">
-        <RouterLink
-          to="/login"
-          class="hidden rounded-xl border-2 border-primary-container px-6 py-2 text-[14px] font-semibold text-primary-container transition-all hover:bg-primary/5 active:scale-95 md:block"
-        >
-          Login
-        </RouterLink>
 
+        <!-- Logged In -->
         <RouterLink
-          to="/register"
+          v-if="user"
+          to="/dashboard"
           class="rounded-xl bg-primary-container px-6 py-2 text-[14px] font-semibold text-white shadow-lg transition-all hover:shadow-primary/20 active:scale-95"
         >
-          Sign Up
+          Back to Dashboard
         </RouterLink>
+
+        <!-- Not Logged In -->
+        <template v-else>
+          <RouterLink
+            to="/login"
+            class="hidden rounded-xl border-2 border-primary-container px-6 py-2 text-[14px] font-semibold text-primary-container transition-all hover:bg-primary/5 active:scale-95 md:block"
+          >
+            Login
+          </RouterLink>
+
+          <RouterLink
+            to="/register"
+            class="rounded-xl bg-primary-container px-6 py-2 text-[14px] font-semibold text-white shadow-lg transition-all hover:shadow-primary/20 active:scale-95"
+          >
+            Sign Up
+          </RouterLink>
+        </template>
+
       </div>
     </div>
   </nav>

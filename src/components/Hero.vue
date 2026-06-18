@@ -34,13 +34,13 @@ import heroImage from "@/assets/images/bento-card-image.png";
       </div>
 
       <!-- Right Image -->
-      <div class="mt-10 flex justify-center md:col-span-6 md:mt-0 md:justify-end">
+      <!-- <div class="mt-10 flex justify-center md:col-span-6 md:mt-0 md:justify-end">
         <img
           :src="heroImage"
           alt="Woman using phone"
           class="w-full max-w-[500px] object-contain md:max-w-[600px]"
-        />
-      </div>
+        /> -->
+      <!-- </div> -->
     </div>
   </section>
 </template>

@@ -11,15 +11,14 @@
       </h2>
 
       <p class="relative z-10 mx-auto mb-10 max-w-xl text-[18px] leading-[28px] opacity-90">
-        Join over 10,000 users creating unforgettable experiences with every
-        message sent.
+        Be among the first to try InviteMe.
       </p>
 
       <!-- Button -->
       <div class="relative z-10 flex flex-col justify-center gap-4 sm:flex-row">
         <button
           class="rounded-xl border border-white/20 bg-white/10 px-10 py-5 text-[24px] font-semibold backdrop-blur-sm transition-all hover:bg-white/20">
-          Send An Invite
+          Get Started Free
         </button>
       </div>
     </div>
