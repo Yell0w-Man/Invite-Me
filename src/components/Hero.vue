@@ -6,7 +6,7 @@ import heroImage from "@/assets/images/bento-card-image.png";
   <section class="mx-auto max-w-[1200px] px-5 pt-32 md:px-16">
     <div class="grid grid-cols-1 items-center gap-6 md:grid-cols-12">
       
-      <div class="md:col-span-6">
+      <div class="md:col-span-12">
         <span
           class="inline-block rounded-full bg-primary/10 px-4 py-1 text-[12px] font-medium uppercase tracking-wide text-primary-container"
         >
@@ -22,8 +22,8 @@ import heroImage from "@/assets/images/bento-card-image.png";
         <p
           class="mt-8 max-w-xl text-[18px] leading-[28px] text-on-surface-variant"
         >
-          Create stunning, mobile-first invitations sent directly via WhatsApp.
-          Manage guests, track RSVPs, and share the excitement in seconds.
+          Create stunning, mobile-first invitations sent directly via WhatsApp. Manage guests, track RSVPs, and share the excitement in seconds.
+        
         </p>
 
         <!-- <button

@@ -1,9 +1,9 @@
 ```vue
 <script setup>
-import weddingTemplate2 from "../assets/images/wedding-template2.jpg";
-import partyTemplate from "../assets/images/party-template.jpg";
-import corporateEvent from "../assets/images/corporate-event.jpg";
-import weddingTemplate1 from "../assets/images/wedding-template1.jpg";
+import weddingTemplate2 from "../assets/images/weddingcard.png";
+import partyTemplate from "../assets/images/partycard.png";
+import corporateEvent from "../assets/images/gala-card.png";
+import weddingTemplate1 from "../assets/images/partycard2.jpg";
 
 const collections = [
   {
@@ -29,6 +29,11 @@ const collections = [
   <section class="mx-auto mt-20 max-w-[1200px] px-5 md:px-16">
     <!-- Section Header -->
     <div class="mb-12">
+      <span
+          class="inline-block rounded-full bg-primary/10 px-4 py-1 text-[12px] font-medium uppercase tracking-wide text-primary-container"
+        >
+          Invitations
+        </span>
       <h2
         class="font-['Hanken_Grotesk'] text-[48px] font-bold leading-[56px] tracking-[-0.02em]"
       >

@@ -31,18 +31,24 @@ const user = JSON.parse(localStorage.getItem("user"));
           About
         </a>
 
-        <!-- <a
-          href="#features"
+        <a
+          href="#pricing"
           class="text-[14px] font-semibold text-on-surface-variant transition-colors hover:text-primary"
         >
-          Testimonials
-        </a> -->
+          Pricing
+        </a>
 
         <a
           href="#sendInvite"
           class="text-[14px] font-semibold text-on-surface-variant transition-colors hover:text-primary"
         >
           How it works
+        </a>
+        <a
+          href="#FAQ"
+          class="text-[14px] font-semibold text-on-surface-variant transition-colors hover:text-primary"
+        >
+          FAQ
         </a>
       </div>
 
