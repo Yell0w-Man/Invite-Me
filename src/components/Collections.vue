@@ -1,9 +1,9 @@
 ```vue
 <script setup>
-import weddingTemplate2 from "../assets/images/weddingcard.png";
-import partyTemplate from "../assets/images/partycard.png";
-import corporateEvent from "../assets/images/gala-card.png";
-import weddingTemplate1 from "../assets/images/partycard2.jpg";
+import weddingTemplate2 from "../assets/images/weddingcard.webp";
+import partyTemplate from "../assets/images/partycard.webp";
+import corporateEvent from "../assets/images/gala-card.webp";
+import weddingTemplate1 from "../assets/images/partycard2.webp";
 
 const collections = [
   {

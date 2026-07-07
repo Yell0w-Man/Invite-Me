@@ -272,10 +272,10 @@
 
         </div>
         <div class="grid md:grid-cols-4 gap-6 mt-12 text-sm text-gray-600">
-          <div>Unlimited Invitations</div>
-          <div>Best Templates</div>
-          <div>Advanced RSVP Analytics</div>
-          <div>Event Reminders</div>
+          <div class="py-4 px-6 bg-[#efedf5] rounded-xl">Unlimited Invitations</div>
+          <div class="py-4 px-6 bg-[#efedf5] rounded-xl">Best Templates</div>
+          <div class="py-4 px-6 bg-[#efedf5] rounded-xl">Advanced RSVP Analytics</div>
+          <div class="py-4 px-6 bg-[#efedf5] rounded-xl">Event Reminders</div>
         </div>
       </div>
     </div>

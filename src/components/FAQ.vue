@@ -1,6 +1,31 @@
-<script>
+<script setup>
+import { ref } from "vue";
 
+const openFAQ = ref(0);
+
+const faqs = [
+    {
+        question: "How do payments work in Nigeria?",
+        answer:
+            "We support all popular local payment methods including bank transfers, credit/debit cards (Mastercard, Visa, Verve), and secure processing via Paystack and Flutterwave.",
+    },
+    {
+        question: "Can I upgrade or downgrade later?",
+        answer:
+            "Absolutely! You can upgrade from the Basic Plan to the Pro Plan at any time. If you run a seasonal event agency, you can subscribe during busy months and pause when business slows down.",
+    },
+    {
+        question: 'What is the "dedicated local number" in the Business Plan?',
+        answer:
+            "We provide a dedicated Nigerian phone number that your guests can call or text to RSVP. Our system automatically records and updates responses in your dashboard.",
+    },
+];
+
+const toggleFAQ = (index) => {
+    openFAQ.value = openFAQ.value === index ? null : index;
+};
 </script>
+
 <template>
     <section class="bg-slate-100 py-20" id="FAQ">
         <div class="max-w-5xl mx-auto px-4">
@@ -10,46 +35,35 @@
                 Frequently Asked Questions
             </h2>
 
-            <!-- FAQ Items -->
-            <div class="space-y-5">
+            <div class="space-y-4">
+                <div v-for="(faq, index) in faqs" :key="index"
+                    class="bg-white border border-purple-300 rounded-2xl overflow-hidden shadow-sm">
 
-                <div class="bg-white rounded-2xl border border-purple-300 p-6">
-                    <h3 class="text-xl font-bold text-slate-900 mb-3">
-                        How do payments work in Nigeria?
-                    </h3>
+                    <!-- Question -->
+                    <button @click="toggleFAQ(index)" class="w-full flex justify-between items-center p-6 text-left">
+                        <span class="text-lg font-semibold text-slate-900">
+                            {{ faq.question }}
+                        </span>
 
-                    <p class="text-slate-600 leading-relaxed">
-                        We support all popular local payment methods including bank transfers,
-                        credit/debit cards (Mastercard, Visa, Verve), and secure processing
-                        via Paystack and Flutterwave.
-                    </p>
-                </div>
 
-                <div class="bg-white rounded-2xl border border-purple-300 p-6">
-                    <h3 class="text-xl font-bold text-slate-900 mb-3">
-                        Can I upgrade or downgrade later?
-                    </h3>
+                        <svg class="w-6 h-6 text-purple-700 transform transition-transform duration-300"
+                            :class="{ 'rotate-180': openFAQ === index }" fill="none" stroke="currentColor"
+                            stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
 
-                    <p class="text-slate-600 leading-relaxed">
-                        Absolutely! You can upgrade from Basic (one-time event) to Pro
-                        (monthly) at any time. If you run a seasonal event agency, you can
-                        subscribe for busy months and pause during slow seasons.
-                    </p>
-                </div>
+                    <!-- Answer -->
+                    <transition enter-active-class="transition-all duration-300 ease-in-out"
+                        leave-active-class="transition-all duration-300 ease-in-out">
+                        <div v-if="openFAQ === index" class="px-6 pb-6 text-slate-600 leading-relaxed">
+                            {{ faq.answer }}
+                        </div>
+                    </transition>
 
-                <div class="bg-white rounded-2xl border border-purple-300 p-6">
-                    <h3 class="text-xl font-bold text-slate-900 mb-3">
-                        What is the "dedicated local number" in the Business Plan?
-                    </h3>
-
-                    <p class="text-slate-600 leading-relaxed">
-                        We provide a specific local Nigerian phone number (e.g. +234...)
-                        that your guests can call or text directly to RSVP. Our system
-                        automatically processes these and logs them straight to your
-                        digital dashboard.
-                    </p>
                 </div>
             </div>
+
         </div>
     </section>
 </template>
