@@ -4,6 +4,8 @@ import Home from '../views/home.vue'
 import Register from '../views/register.vue'
 import Login from '../views/login.vue'
 import Dashboard from '../views/dashboard.vue'
+import Events from "../views/events.vue"
+import Invitation from "../views/invitation.vue"
 
 const routes = [
   {
@@ -26,6 +28,16 @@ const routes = [
     name: 'dashboard',
     component: Dashboard,
   },
+  {
+  path: "/events",
+  name: "events",
+  component: Events,
+  },
+  {
+   path: "/invitation",
+   name: "invitation",
+   component: Invitation,
+  }
 ]
 
 const router = createRouter({

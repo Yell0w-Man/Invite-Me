@@ -32,17 +32,16 @@ const user = JSON.parse(localStorage.getItem("user"));
         </a>
 
         <a
-          href="#pricing"
-          class="text-[14px] font-semibold text-on-surface-variant transition-colors hover:text-primary"
-        >
-          Pricing
-        </a>
-
-        <a
           href="#sendInvite"
           class="text-[14px] font-semibold text-on-surface-variant transition-colors hover:text-primary"
         >
           How it works
+        </a>
+         <a
+          href="#pricing"
+          class="text-[14px] font-semibold text-on-surface-variant transition-colors hover:text-primary"
+        >
+          Pricing
         </a>
         <a
           href="#FAQ"
@@ -51,6 +50,7 @@ const user = JSON.parse(localStorage.getItem("user"));
           FAQ
         </a>
       </div>
+
 
       <!-- Action Buttons -->
       <div class="flex items-center gap-4">
