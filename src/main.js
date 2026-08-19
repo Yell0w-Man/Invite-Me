@@ -7,5 +7,5 @@ import './assets/main.css'
 
 createApp(App)
   .use(router)
-  .use(createHead())
-  .mount('#app')
+  .use(createHead()) 
+  .mount('#app')    

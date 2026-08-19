@@ -6,6 +6,8 @@ import Login from '../views/login.vue'
 import Dashboard from '../views/dashboard.vue'
 import Events from "../views/events.vue"
 import Invitation from "../views/invitation.vue"
+import ForgotPassword from "../views/forgot-password.vue";
+import ResetPassword from "../views/reset-password.vue";
 
 const routes = [
   {
@@ -37,7 +39,17 @@ const routes = [
    path: "/invitation",
    name: "invitation",
    component: Invitation,
-  }
+  },
+  {
+  path: "/forgot-password",
+  name: "forgot-password",
+  component: ForgotPassword,
+},
+{
+  path: "/reset-password",
+  name: "reset-password",
+  component: ResetPassword,
+},
 ]
 
 const router = createRouter({
