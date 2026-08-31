@@ -1,37 +1,36 @@
 <template>
   <div class="relative min-h-screen bg-background overflow-hidden">
     <!-- Background Blobs -->
-    <div
-      class="absolute -top-52 -right-32 w-[520px] h-[520px] rounded-full bg-primary opacity-20"
-    ></div>
+    <div class="absolute -top-52 -right-32 w-[520px] h-[520px] rounded-full bg-primary opacity-20"></div>
 
-    <div
-      class="absolute -bottom-40 -left-32 w-[420px] h-[420px] rounded-full bg-primary opacity-10"
-    ></div>
+    <div class="absolute -bottom-40 -left-32 w-[420px] h-[420px] rounded-full bg-primary opacity-10"></div>
 
-    <div
-      class="relative z-10 min-h-screen flex items-center justify-center px-5 py-8"
-    >
+    <div class="relative z-10 min-h-screen flex items-center justify-center px-5 py-8">
       <div
-        class="w-full max-w-[1240px] bg-white rounded-[32px] border border-purple-100 shadow-xl p-8 lg:p-12 grid lg:grid-cols-2 gap-10"
-      >
+        class="w-full max-w-[1240px] bg-white rounded-[32px] border border-purple-100 shadow-xl p-8 lg:p-12 grid lg:grid-cols-2 gap-10">
         <!-- LEFT SIDE -->
-        <div class="flex flex-col justify-between">
+        <div class="flex flex-col h-full w-full">
+
           <!-- Logo -->
-          <div>
-            <img
-              src="/src/assets/images/InviteMe.png"
-              alt="InviteMe Logo"
-              class="w-28"
-            />
+          <!-- Logo -->
+          <div class="flex-shrink-0 px-8 pt-8 pb-4">
+            <router-link to="/">
+              <img src="/src/assets/images/InviteMe.png" alt="InviteMe Logo" class="w-28 cursor-pointer" />
+            </router-link>
           </div>
+
+
+          <!-- Illustration -->
+          <div class="flex-1 overflow-hidden">
+            <img src="/src/assets/images/register-illustration.png" alt="InviteMe illustration"
+              class="w-full h-full object-cover" />
+          </div>
+
         </div>
 
         <!-- RIGHT SIDE -->
         <div class="flex justify-center items-center">
-          <div
-            class="w-full max-w-md bg-white border border-purple-100 rounded-[26px] p-8 shadow-lg"
-          >
+          <div class="w-full max-w-md bg-white border border-purple-100 rounded-[26px] p-8 shadow-lg">
             <h1 class="text-4xl font-bold text-primary mb-2">Create Account</h1>
 
             <p class="text-gray-500 mb-8">
@@ -45,12 +44,8 @@
                   Full Name
                 </label>
 
-                <input
-                  v-model="fullName"
-                  type="text"
-                  placeholder="Bami Ewetuga"
-                  class="w-full px-4 py-4 rounded-xl border border-gray-300 bg-white focus:outline-none focus:ring-4 focus:ring-primary/10 focus:border-primary"
-                />
+                <input v-model="fullName" type="text" placeholder="Bami Ewetuga"
+                  class="w-full px-4 py-4 rounded-xl border border-gray-300 bg-white focus:outline-none focus:ring-4 focus:ring-primary/10 focus:border-primary" />
               </div>
 
               <!-- Email -->
@@ -59,12 +54,8 @@
                   Email Address
                 </label>
 
-                <input
-                  v-model="email"
-                  type="email"
-                  placeholder="stephen@email.com"
-                  class="w-full px-4 py-4 rounded-xl border border-gray-300 bg-white focus:outline-none focus:ring-4 focus:ring-primary/10 focus:border-primary"
-                />
+                <input v-model="email" type="email" placeholder="stephen@email.com"
+                  class="w-full px-4 py-4 rounded-xl border border-gray-300 bg-white focus:outline-none focus:ring-4 focus:ring-primary/10 focus:border-primary" />
               </div>
 
               <!-- Password -->
@@ -73,29 +64,20 @@
                   Password
                 </label>
 
-                <input
-                  v-model="password"
-                  type="password"
-                  placeholder="••••••••"
-                  class="w-full px-4 py-4 rounded-xl border border-gray-300 bg-white focus:outline-none focus:ring-4 focus:ring-primary/10 focus:border-primary"
-                />
+                <input v-model="password" type="password" placeholder="••••••••"
+                  class="w-full px-4 py-4 rounded-xl border border-gray-300 bg-white focus:outline-none focus:ring-4 focus:ring-primary/10 focus:border-primary" />
 
                 <p class="mt-2 text-xs text-gray-500 leading-relaxed">
-                  Must contain at least One upper-case letter, numbers, symbols and at least 8  
+                  Must contain at least One upper-case letter, numbers, symbols and at least 8
                   characters.
                 </p>
               </div>
 
-              <button
-                type="submit"
-                :disabled="!isFormValid"
-                class="w-full py-4 rounded-2xl text-white font-semibold transition-all"
-                :class="
-                  isFormValid
-                    ? 'bg-purple-600 hover:bg-purple-700 cursor-pointer'
-                    : 'bg-gray-400 cursor-not-allowed'
-                "
-              >
+              <button type="submit" :disabled="!isFormValid"
+                class="w-full py-4 rounded-2xl text-white font-semibold transition-all" :class="isFormValid
+                  ? 'bg-purple-600 hover:bg-purple-700 cursor-pointer'
+                  : 'bg-gray-400 cursor-not-allowed'
+                  ">
                 Create Account
               </button>
             </form>
@@ -137,20 +119,20 @@ const handleSubmit = async () => {
   if (!isFormValid.value) return;
 
   try {
-   const response = await fetch(
-  "http://localhost:8000/api/v1/auth/register",
-  {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      name: fullName.value,
-      email: email.value,
-      password: password.value,
-    }),
-  }
-);
+    const response = await fetch(
+      "http://localhost:8000/api/v1/auth/register",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: fullName.value,
+          email: email.value,
+          password: password.value,
+        }),
+      }
+    );
 
     const data = await response.json();
 
@@ -167,10 +149,10 @@ const handleSubmit = async () => {
     alert("Account created successfully!");
 
     router.push("/login");
- 
+
   } catch (error) {
-  console.error("Registration error:", error);
-  alert(error.message || "Registration failed. Please try again.");
-}
+    console.error("Registration error:", error);
+    alert(error.message || "Registration failed. Please try again.");
+  }
 };
 </script>
