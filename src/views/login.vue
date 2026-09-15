@@ -57,7 +57,7 @@ const handleLogin = async () => {
 
           <!-- Illustration -->
           <div class="flex-1 flex items-center justify-center mt-6">
-            <img src="@/assets/images/login-illustration.png" alt="InviteMe illustration"
+            <img src="@/assets/images/login-illustration.webp" alt="InviteMe illustration"
               class="w-full max-w-[520px] h-auto object-contain" />
           </div>
         </div>

@@ -1,5 +1,5 @@
 <script setup>
-import heroImage from "@/assets/images/hero-illustration.png";
+import heroImage from "@/assets/images/hero-illustration.webp";
 </script>
 <template>
   <section class="mx-auto max-w-[1200px] px-5 pt-32 md:px-16">
