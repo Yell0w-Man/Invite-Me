@@ -49,7 +49,7 @@ import heroImage from "@/assets/images/hero-illustration.webp";
 
       </div>
 
-      <div
+      <!-- <div
         class="flex items-center justify-center md:col-span-6"
       >
         <img
@@ -57,7 +57,7 @@ import heroImage from "@/assets/images/hero-illustration.webp";
           alt="InviteMe illustration"
           class="w-full max-w-[560px] object-contain"
         />
-      </div>
+      </div> -->
 
     </div>
   </section>
