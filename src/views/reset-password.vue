@@ -33,7 +33,7 @@ const resetPassword = async () => {
 
   try {
     const response = await fetch(
-      "http://localhost:8000/api/v1/auth/reset-password",
+      "https://realistic-mirna-ayobamidele-organisation-f9ec0a72.koyeb.app/api/v1/auth/reset-password",
       {
         method: "POST",
         headers: {

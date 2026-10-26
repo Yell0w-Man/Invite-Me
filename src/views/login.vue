@@ -8,7 +8,7 @@ const email = ref("");
 const password = ref("");
 
 const handleLogin = async () => {
-  const res = await fetch("http://localhost:8000/api/v1/auth/login", {
+  const res = await fetch("https://realistic-mirna-ayobamidele-organisation-f9ec0a72.koyeb.app/api/v1/auth/login", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

@@ -120,7 +120,7 @@ const handleSubmit = async () => {
 
   try {
     const response = await fetch(
-      "http://localhost:8000/api/v1/auth/register",
+      "https://realistic-mirna-ayobamidele-organisation-f9ec0a72.koyeb.app/api/v1/auth/register",
       {
         method: "POST",
         headers: {
